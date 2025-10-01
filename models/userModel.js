@@ -13,10 +13,10 @@ exports.getUserById = async (id) => {
 }
 
 // Crear un nuevo usuario
-exports.createUser = async (first_name, last_name, email, gender) => {
+exports.createUser = async (first_name, last_name, email, gender, password) => {
     const res = await pool.query(
-        'INSERT INTO users (first_name, last_name, email, gender) VALUES ($1, $2, $3, $4) RETURNING *',
-        [first_name, last_name, email, gender]
+        'INSERT INTO users (first_name, last_name, email, gender, password) VALUES ($1, $2, $3, $, $5) RETURNING *',
+        [first_name, last_name, email, gender, password]
     );
     return res.rows[0];
 }
