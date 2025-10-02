@@ -29,8 +29,6 @@ app.use('/api/roles', roleRoutes);
 app.use('/api/roles/:id', roleRoutes);
 // Ruta para eliminar un rol
 app.use('/api/roles/:id', roleRoutes);
-// Ruta para obtener un rol por ID
-app.use('/api/roles/:id', roleRoutes);
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
